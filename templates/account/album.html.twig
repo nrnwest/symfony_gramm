@@ -1,0 +1,36 @@
+{% extends 'base.html.sticky_footer_navbar.twig' %}
+
+{% block title %}Просмотер фото: {{ account.name }}  {{ account.family }} (c){% endblock %}
+
+{% block body %}
+
+    {% if accountIsUser %}
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                {{ form(form) }}
+            </div>
+        </div>
+    {% else %}
+        <div>Просмотер фото: <h3>{{ account.name }}  {{ account.family }} (c)</h3></div>
+    {% endif %}
+
+    <div class="row">
+        {% for image in images %}
+            <div class="col-md-4">
+                <div class="thumbnail">
+
+                    <img src="/images/{{ image.path }}" alt="Lights" style="width:100%">
+                    <div class="caption">
+                        {% if accountIsUser %}
+                            <a href="{{ path('app_account_delimage', {id: image.id, iduser: image.account.users.id}) }}">
+                                <p>Удалить</p>
+                            </a>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

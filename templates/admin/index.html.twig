@@ -1,0 +1,47 @@
+{% extends 'base.html.sticky_footer_navbar.twig' %}
+
+{% block title %}SymfonyGramm Task9{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+    <div class="row d-flex justify-content-center">
+        <table class="table table-dark table-striped w-50 table table-bordered  ">
+            <thead>
+            <tr>
+                <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;
+">ФИО</font></font></th>
+                <th scope="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;
+">Удалиь</font></font></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for account in accounts %}
+                <tr>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;
+"><a href="{{ path('app_account', {id: account.users.id}) }}">{{ account.name }} {{ account.family }}</a></font></font>
+                    </td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                <a href="{{ path('app_admin_del_user', {idUser: account.users.id}) }}">Удалить</a>
+                            </font></font>
+                    </td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.sticky_footer_navbar.twig' %}
+
+{% block title %}Акаунт {{ account.name }}  {{ account.family }}{% endblock %}
+
+{% block body %}
+
+
+    <table class="table table-borderless">
+
+        <tbody>
+        <tr>
+            <td>
+                <div>
+                    {{ form(form) }}
+                </div>
+            </td>
+            <td>
+                <div><b>Email:</b> {{ account.users.email }}<b> Роль: </b>
+                    {% for role in  account.users.roles %}
+                        {% if role == 'ROLE_ADMIN' %}
+                        <a href="{{ path('app_admin') }}">{{role}}</a>
+                         {% else %}
+                        {{ role }}<br>
+                             {% endif %}
+                    {% endfor %}
+                    <b>ID User:</b> {{ account.users.id }}
+                </div>
+                <div class="p-3 border bg-light w-50">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="/avatar/{{ account.avatarPath }}" class="img-thumbnail"
+                                 alt="аватар">
+                        </div>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+{% endblock %}
