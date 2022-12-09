@@ -2,4 +2,5 @@
 .phpunit.result.cache
 /vendor/
 /var/
+/migrations/*.php
 #.env

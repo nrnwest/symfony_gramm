@@ -1,4 +1,5 @@
-### Project Names
+## Project Names
+
 Storyline:
 Write a program like Instagram. This application must have a web interface.
 The user can register on the website by email.After basic registration,
@@ -12,7 +13,13 @@ cannot view the profile and pictures of users.
 The project needs to be pinked on a Linux or Windows (wsl2 Unbuntu 20.*) platform.
 Docker must be installed.
 
-## Deployment
+### Web Admin login
+
+login: userAdmin@example.com  
+password: 123654  
+панель: /admin
+
+### Deployment
 
 ```bash
 git clone https://github.com/nrnwest/symfony_gramm.git
@@ -21,7 +28,9 @@ git clone https://github.com/nrnwest/symfony_gramm.git
 ```bash
 make dep
 ````
+
 If an error occurs, run the following commands, errors occur due to weak computer:
+
 1. make clear_migrate
 2. make build
 3. make up
@@ -29,16 +38,17 @@ If an error occurs, run the following commands, errors occur due to weak compute
 4. make clear_add
 5. make t_clear_add
 
-
 ### Website
+
 <http://localhost:5000>
 
 ### pgAdmin
+
 user admin@admin.com
 password root
 <http://localhost:5050/browser/>
 
-## Tests
+### Tests
 
 ```bash
 make test 
