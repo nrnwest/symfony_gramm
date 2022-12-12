@@ -46,7 +46,7 @@ class AppService
         return $repository->findOneBy(['users_id' => $idUser]);
     }
 
-    public function delImage($idImage): void
+    public function delImage(int $idImage): void
     {
         /**
          * @var ImageRepository $repository ;
