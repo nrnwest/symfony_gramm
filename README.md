@@ -1,5 +1,8 @@
 ## Project Names
 
+Analyze and decompose SymfonyGramm. You should do research and describe project structure. 
+Create UML class diagrams for application and describe each module etc.
+
 Storyline:
 Write a program like Instagram. This application must have a web interface.
 The user can register on the website by email.After basic registration,
@@ -11,7 +14,7 @@ look at pictures of other users. Unauthorized guests
 cannot view the profile and pictures of users.
 
 The project needs to be pinked on a Linux or Windows (wsl2 Unbuntu 20.*) platform.
-Docker must be installed.
+Docker, make must be installed.
 
 ### Web Admin login
 
