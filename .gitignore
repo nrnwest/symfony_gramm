@@ -4,3 +4,4 @@
 /var/
 /migrations/*.php
 #.env
+README_MY.md

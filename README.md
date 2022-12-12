@@ -56,3 +56,6 @@ password root
 ```bash
 make test 
 ````
+
+### Debug Panel
+composer require --dev symfony/profiler-pack
