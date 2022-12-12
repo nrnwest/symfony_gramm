@@ -20,7 +20,6 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('email', TextType::class, [
-                'mapped' => false,
                 'constraints' => [
                     new Email([
                         'message' => 'no valid a email',
