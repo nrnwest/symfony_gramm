@@ -2,6 +2,5 @@
 .phpunit.result.cache
 /vendor/
 /var/
-/migrations/*.php
 #.env
 README_MY.md
