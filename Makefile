@@ -82,7 +82,7 @@ clear_add:
 	make clear_migrate drop diff migrate load
 
 clear_migrate:
-	rm -rf ./migrations/*
+	rm -rf ./migrations/*.php
 
 #################
 #  Deployment
