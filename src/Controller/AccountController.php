@@ -29,10 +29,10 @@ class AccountController extends AbstractController
             $idUserRequest = $this->getUser()->getId();
         }
 
-        $account = $service->getAccoutUser($this->getUser()->getId());
+        $account = $service->getAccountUser($this->getUser()->getId());
         // проверяем если пользователь не сообственик акаунта ему просто показываем акаунт
         if ($idUserRequest !== $this->getUser()->getId()) {
-            $account = $service->getAccoutUser($idUserRequest);
+            $account = $service->getAccountUser($idUserRequest);
             return $this->render('account/view.html.twig', [
                 'account' => $account,
             ]);

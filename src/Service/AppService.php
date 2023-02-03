@@ -78,7 +78,7 @@ class AppService
         $this->entityManager->flush();
     }
 
-    public function getAccoutUser(int $idUser): Account
+    public function getAccountUser(int $idUser): Account
     {
         $repository = $this->doctrine->getRepository(Account::class);
 
@@ -94,7 +94,7 @@ class AppService
             // сохраним сущность
             $this->saveEntity($account);
 
-            return $this->getAccoutUser($idUser);
+            return $this->getAccountUser($idUser);
         }
 
         return $result;
